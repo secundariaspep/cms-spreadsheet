@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(charset="uft-8")/
+    Tramites registrados
+  body
+    div
+      p
+        a(href='/form') Ingresar nuevo
+      hr
+    div
+      ul
+        each registro, index in registros
+            li #{registro.Año + ':' + registro.Número + ':' + registro.Escuela}
+    div
+      hr
+      p
+        a(href='/form') Ingresar nuevo

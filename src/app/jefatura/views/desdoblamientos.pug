@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+
+    main#main
+    h1.ui.center.aligned.header Desdoblamientos - Presupuesto 2021
+    .ui.container
+      table.ui.celled.table.center.aligned
+        thead
+          tr
+            th Escuela
+            th Nombre
+            th % Aporte
+            th Localidad
+            th Cantidad
+            th Detalle
+            th Autorizado / A crear
+            th Normativa
+            th Observaciones
+        tbody
+          each desdoblamientos in desdoblamiento
+            tr
+              td #{desdoblamiento.name.first}
+              td #{desdoblamiento.name.last}
+              td #{desdoblamiento.email}
+              td #{desdoblamiento.phone}
+              td #{desdoblamiento.location.city}
+        tfoot
+          tr
+            th(colspan='6')
